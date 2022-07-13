@@ -42,7 +42,7 @@ We will test this service using the curl utility.  The curl utility is quite use
 
 3. Open another terminal or command window.  Type this curl command to send a request to this service:
 ```
-    curl http://localhost:8080/get/items
+    curl "http://localhost:8080/get/items"
 ```
 
 ### GET Service - Search for and Return a ToDo List
@@ -81,17 +81,17 @@ We will test this service using the curl utility.  The curl utility is quite use
 3. Open another terminal or command window.  
 Contruct a curl command to search for a task: 
 ``` 
-    curl http://localhost:8080/get/searchitem?taskname=<nametosearchfor>
+    curl "http://localhost:8080/get/searchitem?taskname=<nametosearchfor>"
 ```
 
 So for example, if you want to search for todo lists with a name of "hello", your command would be:
 ```
-    curl http://localhost:8080/get/searchitem?taskname=hello
+    curl "http://localhost:8080/get/searchitem?taskname=hello"
 ```
 
 If you want to search for a task name with a space in it, for example "hello world" you will need to use the html code for a space (%20) in your curl command, like this: 
 ```
-    curl http://localhost:8080/get/searchitem?taskname=hello%20world
+    curl "http://localhost:8080/get/searchitem?taskname=hello%20world"
 ```
 
 ### Optional - Use the UI to Call the Backend Service to Return All Todo Lists
